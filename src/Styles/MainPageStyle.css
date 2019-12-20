@@ -19,9 +19,11 @@
     left: 30vw;
     height: 40vw;
     width: 40vw;
+  
 }
 
 .ourButton{
+    font-family: 'Cocon Next Arabic'!important;
     position: absolute;
     height: 10%;
     width:40%;

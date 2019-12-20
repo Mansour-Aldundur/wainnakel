@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,8 +9,16 @@ a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: 'Cocon Next Arabic';
+  src: url('./fonts/cocon-next-arabic-webfont.eot');
+  src: url('./fonts/cocon-next-arabic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/cocon-next-arabic-webfont.woff') format('woff'),
+       url('./fonts/cocon-next-arabic-webfont.ttf') format('truetype'),
+       
+  }
 
 body {
- 
+  font-family: 'Cocon Next Arabic'!important;
   line-height: 1.4;
 }
