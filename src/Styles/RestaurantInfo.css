@@ -1,0 +1,19 @@
+.bgInfoSection{
+    width: 100% ;
+    background-color:  rgb(255, 255, 255, 0.6);
+    position: absolute;
+    z-index: 34;
+    height: 20vh;
+}
+
+.optionsContainer{
+    display: grid;
+    grid-template-columns:auto auto auto;
+    grid-gap: 0px;
+    padding: 0px;
+}
+.myIconSize{
+    height: 13%;
+    width: 13% ;
+}
+

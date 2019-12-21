@@ -5,6 +5,7 @@ import { geolocated } from "react-geolocated";
 import NavbarWainnakel from './components/NavbarWainnakel.js';
 import MapWainnakel from './components/MapWainnakel.js'; 
 import MainPage from './components/MainPage.js'; 
+import RestaurantInfo from './components/RestaurantInfo';
 
 import './App.css';
 //! Styles 
@@ -22,7 +23,7 @@ class App extends Component{
     lng: null,
    
   }
-
+// Getting the user location 
   async componentDidMount() {
     navigator.geolocation.getCurrentPosition(position => {
       this.setState({ lat: position.coords.latitude, lng: position.coords.longitude , loading:false });
@@ -30,10 +31,10 @@ class App extends Component{
     }, err => console.log(err)
     );
   }
- 
 
+
+  
    render() {  
-    
     return (
        <div className="App">
           {this.state.loading || !this.state.lat || !this.state.lng ? 
@@ -41,11 +42,14 @@ class App extends Component{
             <div> loading .. </div> 
           ):
           (
+            <div>
             <MapWainnakel latitude={this.state.lat} longitude={this.state.lng}/>
+            <NavbarWainnakel/>
+            <RestaurantInfo latitude={this.state.lat} longitude={this.state.lng}/>
+            </div>
           )
-        }
-          
-          <MainPage buttonClicked= {this.state.buttonClicked}/>
+        } 
+          <MainPage/>
 
       </div>
     )

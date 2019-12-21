@@ -3,15 +3,21 @@ import logo from '../img/LogoPrimery-wainnakel.svg';
 import {Button}  from 'react-bootstrap';
 
 class MainPage extends Component {
+ 
+  handleClick(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
 
-
+  }
+  
   render(){
-    console.log('what the hell',this.props.buttonClicked);
+
+
   return (
     <div className= 'mainContainer'>
     <div className = 'mainBackgorund'>
       <div className = 'mainlogo'> <img src={logo} /> </div>
-      <Button onClick={()=>{ alert('alert'); }} variant='primary' size='lg' className='ourButton'>اقترح</Button>
+      <Button onClick={this.handleClick} variant='primary' size='lg' className='ourButton'>اقترح</Button>
     </div>
     </div>
   );}
