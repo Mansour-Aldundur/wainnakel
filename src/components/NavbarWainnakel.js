@@ -6,15 +6,15 @@ import logoNav from '../img/NavbarLogo.svg';
 
 function NavbarWainnakel() {
   return (
-    <Navbar className='navbar-custom-color' expand="lg" >
-  <Navbar.Brand className="navbar-brand-custom" href="#home"> 
-  <img src={logoNav}width="45" height="45" className="d-inline-block align-center"/>
+    <Navbar className='navbar-custom-color' expand='lg  ' >
+  <Navbar.Brand className='nav-brand-custom'> 
+  <img src={logoNav}width="80" height="80" className=" navbar-brand-custom  mx-auto"/>
   <span  className='logo-label'>وين ناكل؟</span>
       </Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  <Navbar.Toggle aria-controls="basic-navbar-nav" className='navbar-dark'/>
   <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto">
-      <Nav.Link href="#home" className='home-label'>الرئيسية</Nav.Link>
+    <Nav className="ml-auto">
+      <Nav.Link  className='home-label light lg' onClick={() => window.location.reload()}>الرئيسية</Nav.Link>
     </Nav>
   
   </Navbar.Collapse>

@@ -8,7 +8,7 @@
     border-bottom: 2px;
     border-color:1px;
     position: sticky;
-    
+    grid-column-start: 2;
 }
 
 .restaName{
@@ -22,6 +22,7 @@
     text-align: center;
     grid-column: 1 / span 3;
     color:rgba(40, 99, 99);
+    font-size: 1.3em;
 }
 
 .optionsContainer{
@@ -36,7 +37,6 @@
 }
 
 .myIconSize{
-    
     height: 2em;
     width: 2em ;
 }
@@ -44,7 +44,42 @@
 .collapseOptions{
     margin-top:1% ;
     grid-column:1/span 3; 
+    text-align: center;
+    align-content: center;
     width:100% ; 
     height: 1.8rem ; 
     background-color: aliceblue;
 }
+
+.showOptions{
+    margin-top:1% ;
+    grid-column:1/span 3; 
+    text-align: center;
+    align-content: center;
+    width:100% ; 
+    height: 1.8rem ; 
+    background-color: aliceblue;
+}
+
+.arrow-up{
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.arrow-down{
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.filling{
+    background-color: aliceblue;
+}
+
+ /* mobile version Styling  */
+ @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    .optionsContainer{
+        grid-gap: 20px;
+        padding: 10px;
+    }
+
+ }

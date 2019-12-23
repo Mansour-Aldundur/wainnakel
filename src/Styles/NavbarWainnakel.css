@@ -1,17 +1,44 @@
 .navbar-custom-color {
     background-color: rgba(40, 99, 99, 0.93) ; 
 }
-
 .navbar-brand-custom{
-    width: 100%;
-    text-align: center;
+    width: 2.2em;
+    height: 2.2em;
+
 }
 
 .logo-label{
-    color:#E1F3F5;
-    padding: 10px;
+   color: white ;
+   font-size: 1.4em !important ;
+   padding-left: 10px;
+
+}
+.home-label{
+    color: white !important;
+    font-size: 2em !important ;
 }
 
-.home-label{
-    color:#E1F3F5 !important;
+.nav-brand-custom{
+    margin-left: 46%;
 }
+
+ /* mobile version Styling  */
+ @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    .navbar-brand-custom{
+        width: 2em;
+        height: 2em;
+
+    }
+        .logo-label{
+        color: white ;
+        float: left;
+        padding-right: 10px;
+        }
+        .home-label{
+            color: white ;
+            font-size: 1em ;
+        }
+        .nav-brand-custom{
+            margin-left: 25%;
+        }
+ }

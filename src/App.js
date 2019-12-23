@@ -12,7 +12,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Styles/NavbarWainnakel.css'; 
-import './Styles/MapWainnakelStyle.css'; 
+
 import './Styles/MainPageStyle.css';
 import {Button}  from 'react-bootstrap';
 import {AnimatedLogo} from './img/animated-logo.svg'; 
@@ -96,14 +96,14 @@ class App extends Component{
      let showNext2 ; 
      let hide = <MainPage /> ; 
      let nextSuggestion ;
-     let suggestButton =  <Button onClick={this.handleNextPage} variant='primary' size='lg' className='ourButton'>اقترح</Button>; 
+     let suggestButton = <div className='button-container'> <Button onClick={this.handleNextPage} variant='success' size='lg' className='ourButton'>اقترح</Button> </div>; 
      let restInfoCalling ; 
 
     if(this.state.buttonClicked){
        showNext1= <NavbarWainnakel/> ;
        showNext2=<RestaurantInfo id ={this.state.id} latitude={this.state.lat} longitude={this.state.lng} restName={this.state.name} restCat={this.state.cat} restlat={this.state.restlat} restlon={this.state.restlon} restrating= {this.state.rating} restLink={this.state.link} />;
        hide = null; 
-       nextSuggestion= <Button onClick={this.handleSuggestButton} variant='primary' size='lg' className='ourButton'>اقتراح آخر</Button>;
+       nextSuggestion= <div className='button2-container'><Button onClick={this.handleSuggestButton} variant='success' size='lg' className='ourButton2'>اقتراح آخر</Button></div>;
        suggestButton=null; 
      }
    
@@ -112,7 +112,9 @@ class App extends Component{
        <div className="App">
           {this.state.loading ?
           (
-           <img src={AnimatedLogo}/>
+            <svg>
+            <image xlinkHref={AnimatedLogo}></image>
+           </svg>
           ):
           (
             <div>
@@ -122,6 +124,7 @@ class App extends Component{
             {hide}
             {suggestButton}
             {nextSuggestion}
+           
            
             </div>
           )

@@ -7,62 +7,114 @@
 
 .mainBackgorund {
     left: 25%;
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 50vw;
     background-color: rgba(40, 99, 99, 0.93);
-    z-index: 0;
+    z-index: -1;
 }
 
 .mainlogo {
-    position: fixed;
-    left: 30vw;
-    height: 40vw;
-    width: 40vw;
-  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 80vh;
 }
 
-.ourButton{
-    font-family: 'Cocon Next Arabic'!important;
-    position: fixed;
-    top:79%;
-    left:40%;
-    width:20%;
-    color:  rgba(40, 99, 99);
+.button-container {
+    padding-top: 42em;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    text-align: center;
+}
+.button2-container {
+    padding-top: 34em;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    text-align: center;
+}
+
+.ourButton {
+
+    font-family: 'Cocon Next Arabic' !important;
+    grid-column-start: 3;
+    color: rgba(40, 99, 99);
     background-color: #E1F3F5;
     border-color: #E1F3F5;
+    font-size: 2em;
+
+
 }
 
+
+
+
 .ourButton:hover {
-    color:  rgba(40, 99, 99);
-    background-color: rgba(225, 243, 245, 0.63);
-    border-color: #E1F3F5; 
+    color: rgba(40, 99, 99) !important;
+    background-color: rgba(225, 243, 245, 0.63) !important;
+    border-color: #E1F3F5 !important;
+    border-width: 3px;
+
+}
+
+.ourButton2 {
+    font-family: 'Cocon Next Arabic' !important;
+    grid-column-start: 3;
+    color: rgba(40, 99, 99);
+    background-color: #E1F3F5;
+    border-color: #E1F3F5;
+    font-size: 1.5em;
+    
+}
+
+.ourButton2:hover {
+    color: rgba(40, 99, 99) !important;
+    background-color: rgba(225, 243, 245, 0.63) !important;
+    border-color: #E1F3F5 !important;
     border-width: 3px;
 }
 
-
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+/* mobile version Styling  */
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
     .mainBackgorund {
-        left:0;
+        left: 0;
         width: 100vw;
-
     }
+
     .mainlogo {
-        position: fixed;
-        left:-10.2vh;
-        height: 70vh;
-        width: 70vh;
-    }
-    
-    .ourButton{
-        top:69%;
-        left:28.4%;
-        width:50%;
 
-        font-size: xx-large;
-        color:  rgba(40, 99, 99);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+
+
+    }
+
+    .ourButton {
+
+        color: rgba(40, 99, 99);
         background-color: #E1F3F5;
         border-color: #E1F3F5;
     }
-  }
+
+    .ourButton2 {
+        
+        color: rgba(40, 99, 99);
+        background-color: #E1F3F5;
+        border-color: #E1F3F5;
+    }
+
+    .button-container {
+        padding-top: 74vh;
+    }
+    .button2-container {
+       
+        padding-top: 53vh;
+    }
+
+}
