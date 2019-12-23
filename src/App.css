@@ -22,3 +22,9 @@ body {
   font-family: 'Cocon Next Arabic'!important;
   line-height: 1.4;
 }
+
+.splashLogo{
+  width: 20px;
+  height:20px;
+  z-index: 398;
+}

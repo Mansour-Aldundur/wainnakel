@@ -24,16 +24,13 @@
 
 .ourButton{
     font-family: 'Cocon Next Arabic'!important;
-    position: absolute;
-    height: 10%;
-    width:40%;
-    top:70%;
-    left:30%;
+    position: fixed;
+    top:79%;
+    left:40%;
+    width:20%;
     color:  rgba(40, 99, 99);
     background-color: #E1F3F5;
     border-color: #E1F3F5;
-    font-size:2em;
-    font-family: 'cocon_next_arabicregular';
 }
 
 .ourButton:hover {
@@ -42,3 +39,30 @@
     border-color: #E1F3F5; 
     border-width: 3px;
 }
+
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .mainBackgorund {
+        left:0;
+        width: 100vw;
+
+    }
+    .mainlogo {
+        position: fixed;
+        left:-10.2vh;
+        height: 70vh;
+        width: 70vh;
+    }
+    
+    .ourButton{
+        top:69%;
+        left:28.4%;
+        width:50%;
+
+        font-size: xx-large;
+        color:  rgba(40, 99, 99);
+        background-color: #E1F3F5;
+        border-color: #E1F3F5;
+    }
+  }

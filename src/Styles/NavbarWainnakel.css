@@ -1,5 +1,17 @@
 .navbar-custom-color {
-    background-color: #286363 ; 
+    background-color: rgba(40, 99, 99, 0.93) ; 
 }
 
+.navbar-brand-custom{
+    width: 100%;
+    text-align: center;
+}
 
+.logo-label{
+    color:#E1F3F5;
+    padding: 10px;
+}
+
+.home-label{
+    color:#E1F3F5 !important;
+}

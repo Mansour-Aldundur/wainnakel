@@ -5,53 +5,26 @@ import galleryIcon from '../img/gallery.svg';
 import infoIcon from '../img/round-info-button.svg';
 
 class RestaurantInfo extends Component {
-    state={
-        loading: true,
-        error: '',
-        name: '',
-        id: '',
-        link: '',
-        cat: '',
-        catId: '',
-        rating: '',
-        lat: '',
-        lon: '',
-        Ulat: this.props.latitude,
-        Ulon: this.props.longitude,
-        open: '',
-        image: []
-    }
-
-    async componentDidMount(){
-        const url = 'https://cors-anywhere.herokuapp.com/https://wainnakel.com/api/v1/GenerateFS.php?uid='+this.state.Ulat+','+this.state.Ulon+'&get_param=value';
-        console.log(url);
-        const response = await fetch(url); 
-        const data = await response.json() ; 
-        console.log(data);
-        this.setState({name:data.name, cat:data.cat,rating:data.rating , loading:false})
-
-    }
-    render() {
+    
+    render() { 
+       let googleMapLink = 'https://www.google.com/maps/search/?api=1&query=Google&query_place_id='+this.props.id ; 
+       let modifiedName =  this.props.restName; 
+       modifiedName =  modifiedName.replace("(","| ");
+       modifiedName = modifiedName.replace(")"," ");
         return (
                 <div>
-                    {this.state.loading|| !this.state.name || !this.state.cat ||!this.state.rating ?
-                    (<div>loading</div>):
-                    ( 
                     <div className='bgInfoSection'>
-                    <h1 className='restaName'>{this.state.name}|</h1>
-                    <p className='catogoryAndRating'>{this.state.cat}-{this.state.rating}</p>
+                    <h1 className='restaName'>{modifiedName}</h1>
+                    <p className='catogoryAndRating'>{this.props.restCat}-{this.props.restrating}/10</p>
                     <div className='optionsContainer'>   
-                        <div className='GoogleMaps'><img src={googleMapsIcon} className='myIconSize'/>      |</div>
+                        <div className='GoogleMaps' onClick={()=> window.open(googleMapLink , "_blank")}><img src={googleMapsIcon} className='myIconSize'/></div>
                       
-                        <div className='restimages'><img src={galleryIcon} className='myIconSize' />         |</div>
+                        <div className='restimages'><img src={galleryIcon} className='myIconSize' /></div>
                       
-                        <div className='infoRest'><img src={infoIcon} className='myIconSize' /></div>      
+                        <div className='infoRest' onClick={()=> window.open(this.props.restLink, "_blank")}><img src={infoIcon} className='myIconSize' /></div>      
                     </div>
-                    <div className='collapseOptions'> </div>
+                    <div className='collapseOptions'>  </div>
                     </div>
-                     )
-                    }
-
                 </div>
         );
     }
